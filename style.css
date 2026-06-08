@@ -1,0 +1,199 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green: #00e639;
+    --green-dark: #00b82c;
+    --black: #0a0a0a;
+    --dark: #111111;
+    --card: #161616;
+    --card2: #1c1c1c;
+    --text: #f0f0f0;
+    --muted: #888;
+    --border: rgba(0,230,57,0.2);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--black); color: var(--text); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,10,10,0.95); border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px); padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between; height: 64px;
+  }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--green); letter-spacing: 3px; }
+  .nav-logo span { color: var(--text); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--green); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; padding: 80px 2rem 4rem; text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 60%, rgba(0,230,57,0.07) 0%, transparent 70%),
+      repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(0,230,57,0.03) 60px, rgba(0,230,57,0.03) 61px),
+      repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(0,230,57,0.03) 60px, rgba(0,230,57,0.03) 61px);
+  }
+  .hero-claw {
+    position: absolute; font-size: 40vw; font-family: 'Bebas Neue', sans-serif;
+    color: rgba(0,230,57,0.03); top: 50%; left: 50%; transform: translate(-50%, -50%);
+    pointer-events: none; letter-spacing: -2vw; line-height: 1;
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 900px; }
+  .hero-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 5px; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; }
+  .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 15vw, 13rem); line-height: 0.9; letter-spacing: 4px; color: var(--text); }
+  .hero h1 .accent { color: var(--green); }
+  .hero-sub { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1rem, 2.5vw, 1.4rem); color: var(--muted); margin-top: 1.5rem; letter-spacing: 2px; text-transform: uppercase; }
+  .hero-stats { display: flex; gap: 3rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--green); line-height: 1; }
+  .stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; max-width: 1300px; margin: 0 auto; }
+  .section-header { margin-bottom: 3rem; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 5px; text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: 2px; line-height: 1; }
+  .section-divider { width: 60px; height: 3px; background: var(--green); margin: 1rem 0; }
+  .section-full { background: var(--dark); border-top: 1px solid rgba(0,230,57,0.08); border-bottom: 1px solid rgba(0,230,57,0.08); }
+
+  /* SOBRE */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .about-text p { font-size: 1.05rem; line-height: 1.8; color: #bbb; margin-bottom: 1.2rem; }
+  .about-visual { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background-color: var(--border); }
+  .fact-cell { background: var(--card); padding: 1.5rem; text-align: center; }
+  .fact-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--green); display: block; }
+  .fact-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+  /* SABORES — TABS */
+  .category-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .tab-btn {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; padding: 9px 22px;
+    border: 1px solid rgba(255,255,255,0.15); background: transparent; color: var(--muted);
+    cursor: pointer; transition: all 0.2s; border-radius: 2px;
+  }
+  .tab-btn.active, .tab-btn:hover { background: var(--green); color: #000; border-color: var(--green); }
+
+  /* FLAVOR LIST — imagem à esquerda */
+  .flavor-list { display: flex; flex-direction: column; gap: 1px; background: rgba(0,230,57,0.08); border: 1px solid var(--border); }
+  .flavor-item {
+    display: none;
+    background: var(--card);
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    transition: background 0.2s;
+  }
+  .flavor-item.visible { display: flex; }
+  .flavor-item:hover { background: var(--card2); }
+
+  /* ZONA DA IMAGEM — lado esquerdo */
+  .flavor-img-wrap {
+    width: 110px;
+    min-width: 110px;
+    height: 110px;
+    background: #0f0f0f;
+    border-right: 1px solid rgba(0,230,57,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .flavor-img-wrap img {
+    width: 80px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+  }
+  /* placeholder quando não há imagem */
+  .flavor-img-wrap .img-placeholder {
+    width: 50px; height: 70px;
+    border: 2px dashed rgba(0,230,57,0.2);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.55rem; font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px; text-transform: uppercase; color: rgba(0,230,57,0.3);
+    text-align: center; line-height: 1.3;
+  }
+
+  /* CONTEÚDO do sabor */
+  .flavor-info { padding: 1.1rem 1.4rem; flex: 1; }
+  .flavor-name {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; font-weight: 700;
+    letter-spacing: 1px; color: var(--text); display: flex; align-items: center; gap: 8px; margin-bottom: 5px;
+  }
+  .flavor-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .flavor-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+  .flavor-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 7px; }
+  .flavor-badge {
+    display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px;
+  }
+  .badge-zero  { background: rgba(200,200,200,0.1); color: #aaa; }
+  .badge-coffee{ background: rgba(150,90,20,0.25); color: #c8a060; }
+  .badge-juice { background: rgba(255,150,0,0.15); color: #ffa030; }
+  .badge-rehab { background: rgba(0,150,255,0.15); color: #40b0ff; }
+  .badge-new   { background: rgba(0,230,57,0.15); color: var(--green); }
+  .badge-nitro { background: rgba(180,0,255,0.15); color: #cc66ff; }
+  .badge-hydro { background: rgba(0,200,200,0.15); color: #00cccc; }
+  .badge-tea   { background: rgba(100,180,0,0.15); color: #88cc00; }
+
+  /* CAFEÍNA */
+  .caffeine-section { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 3rem; margin-top: 4rem; }
+  .caffeine-title { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 1.5rem; color: var(--green); }
+  .caffeine-bars { display: flex; flex-direction: column; gap: 1rem; }
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 60px; align-items: center; gap: 1rem; }
+  .bar-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 1px; color: var(--muted); text-align: right; }
+  .bar-track { height: 8px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 2px; }
+  .bar-val { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; color: var(--text); font-weight: 600; }
+
+  /* INGREDIENTES */
+  .ingredients-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 1rem; }
+  .ingredient-cell { background: var(--card); padding: 1.5rem; text-align: center; }
+  .ing-icon { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+  .ing-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 1px; color: var(--text); margin-bottom: 4px; }
+  .ing-amount { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--green); display: block; }
+  .ing-desc { font-size: 0.78rem; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 2rem; border-left: 1px solid var(--border); margin-top: 1rem; }
+  .timeline-item { margin-bottom: 2.5rem; position: relative; }
+  .timeline-item::before { content: ''; position: absolute; left: -2.38rem; top: 6px; width: 10px; height: 10px; background: var(--green); border-radius: 50%; box-shadow: 0 0 8px var(--green); }
+  .timeline-year { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--green); letter-spacing: 2px; }
+  .timeline-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; color: var(--text); margin-bottom: 4px; }
+  .timeline-text { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+
+  /* PATROCINIOS */
+  .sponsorship-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .sponsor-cell { background: var(--card); padding: 1.5rem; display: flex; flex-direction: column; gap: 8px; }
+  .sponsor-sport { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--green); }
+  .sponsor-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); }
+
+  /* FOOTER */
+  footer { background: var(--dark); border-top: 1px solid var(--border); text-align: center; padding: 3rem 2rem; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--green); letter-spacing: 6px; }
+  .footer-tagline { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 5px; text-transform: uppercase; color: var(--muted); margin-top: 0.5rem; }
+  .footer-warning { margin-top: 2rem; font-size: 0.75rem; color: #555; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--green-dark); border-radius: 3px; }
+
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+    .bar-row { grid-template-columns: 110px 1fr 45px; }
+    .caffeine-section { padding: 2rem 1.2rem; }
+    .flavor-img-wrap { width: 80px; min-width: 80px; height: 80px; }
+    .flavor-img-wrap img { width: 55px; height: 70px; }
+  }

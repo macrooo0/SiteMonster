@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monster Energy — Unleash The Beast</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">M<span>onster</span></div>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#sabores">Sabores</a></li>
+    <li><a href="#ingredientes">Ingredientes</a></li>
+    <li><a href="#historia">História</a></li>
+    <li><a href="#patrocinios">Patrocínios</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-claw">M</div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Monster Beverage Corporation · Desde 2002</p>
+    <h1><span class="accent">Monster</span><br>Energy</h1>
+    <p class="hero-sub">Unleash the Beast — A bebida que alimenta o extremo</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">300+</div><div class="stat-label">Sabores Mundiais</div></div>
+      <div class="stat"><div class="stat-num">160mg</div><div class="stat-label">Cafeína por Lata</div></div>
+      <div class="stat"><div class="stat-num">175+</div><div class="stat-label">Países</div></div>
+      <div class="stat"><div class="stat-num">2002</div><div class="stat-label">Ano de Fundação</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<div id="sobre">
+<section>
+  <div class="section-header">
+    <p class="section-label">Sobre a Marca</p>
+    <h2 class="section-title">O Que é a Monster?</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>A Monster Energy foi criada pela <strong>Hansen Natural Company</strong> (hoje Monster Beverage Corporation) e lançada a 18 de abril de 2002, em Corona, Califórnia, EUA. Com a sua lata preta icónica e o logótipo em forma de garra verde, a Monster tornou-se rapidamente uma das marcas de bebidas energéticas mais reconhecidas do mundo.</p>
+      <p>Em 2022, a Monster Energy detinha <strong>30.1% do mercado americano de bebidas energéticas</strong> — a segunda posição, logo atrás da Red Bull. A marca é conhecida por patrocinar eventos extremos, desportos motorizados, esports, surf, skate e muito mais.</p>
+      <p>Ao longo de mais de duas décadas, a Monster expandiu o seu portfólio para mais de <strong>300 sabores e variantes</strong> em todo o mundo, incluindo as suas linhas principais: Monster Energy, Java Monster, Zero Ultra, Juice Monster, Rehab, Hydro, Nitro, Dragon Tea e muitas mais.</p>
+    </div>
+    <div class="about-visual">
+      <div class="fact-cell"><span class="fact-num">2ª</span><span class="fact-label">Maior Marca Mundial</span></div>
+      <div class="fact-cell"><span class="fact-num">40%</span><span class="fact-label">Market Share EUA</span></div>
+      <div class="fact-cell"><span class="fact-num">350M</span><span class="fact-label">Latas Vendidas/Ano</span></div>
+      <div class="fact-cell"><span class="fact-num">500ml</span><span class="fact-label">Tamanho Standard</span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- SABORES -->
+<div id="sabores" class="section-full">
+<section>
+  <div class="section-header">
+    <p class="section-label">Catálogo Completo</p>
+    <h2 class="section-title">Todos os Sabores</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <!-- TABS — sem botão "Todos", cada linha é um separador -->
+  <div class="category-tabs">
+    <button class="tab-btn active" onclick="filterFlavors('original', this)">Monster Original</button>
+    <button class="tab- btn" onclick="filterFlavors('ultra', this)">Ultra Zero Sugar</button>
+    <button class="tab-btn" onclick="filterFlavors('juice', this)">Juice</button>
+    <button class="tab-btn" onclick="filterFlavors('java', this)">Java Café</button>
+  </div>
+
+  <div class="flavor-list" id="flavor-list">
+
+    <!-- ═══════════════════════════════════════════════════════
+         MONSTER ORIGINAL
+         Para adicionar imagem: substitui o <div class="img-placeholder">
+         por <img src="TUA_IMAGEM.png" alt="nome do sabor">
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item visible" data-cat="original">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Monster Original Verde -->
+        <img src="imagem para html/MonsterOriginal.png" alt="MonsterOriginal">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#00e639"></span>Monster Energy Original</div>
+        <div class="flavor-desc">O clássico absoluto. Sabor citríneo-adocicado com a fórmula energética completa. A lata preta com a garra verde que começou tudo em 2002.</div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="original">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Monster Lo-Carb (lata azul) -->
+        <img src="imagem para html/Monster Energy Absolutely Zero.png" alt="Monster Absolutely Zero">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#2255cc"></span>Absolutely Zero</div>
+        <div class="flavor-desc">Versão com menos hidratos de carbono e menos açúcar. Sabor próximo do original mas mais leve. Lata azul escuro.</div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="original">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Monster Assault (camuflado) -->
+        <img src="imagem para html/Monster Reserve White Pineapple.png" alt="Monster Reserve White Pineapple">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#4a5a3a"></span>Monster Reserve White Pineapple</div>
+        <div class="flavor-desc">Design camuflado militar. Sabor mais suave e menos doce que o original. Cola-citríneo equilibrado.</div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="original">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Monster Khaos (laranja) -->
+        <img src="imagem para html/Full Throttle Zero Sugar.png" alt="Full Throttle Zero Sugar">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff6600"></span>Full Throttle Zero Sugar</div>
+        <div class="flavor-desc">Metade energético, metade sumo de laranja. Mais frutado e levemente cítrico. Lata laranja.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-juice">Com Sumo</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="original">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Monster Mixxd (roxo/vermelho) -->
+        <img src="imagem para html/Lando Norris Zero Sugar.png" alt="Lando Norris Zero Sugar">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#aa2288"></span>Lando Norris Zero Sugar</div>
+        <div class="flavor-desc">Mistura de frutos vermelhos com energético clássico Monster. Sabor intenso a ponche de fruta.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-juice">Com Sumo</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ULTRA (ZERO SUGAR)
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item" data-cat="ultra">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Ultra White (lata branca) -->
+        <img src="imagem para html/Monster Ultra Watermelon.png" alt="Monster Ultra Watermelon">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#e8e8e8"></span>Monster Ultra Watermelon</div>
+        <div class="flavor-desc">O mais vendido de TODA a Monster nos EUA. Sabor cítrico-floral suave. O "Monstro Branco". Zero açúcar, zero calorias.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-zero">Zero Sugar</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="ultra">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Ultra Red -->
+        <img src="imagem para html/Monster Ultra Fiesta.png" alt="Monster Ultra Fiesta">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#cc2222"></span>Monster Ultra Fiesta</div>
+        <div class="flavor-desc">Sabor a frutos vermelhos misturados. Zero açúcar. Um dos favoritos da linha Ultra. Lata vermelha metálica.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-zero">Zero Sugar</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="ultra">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Ultra Gold -->
+        <img src="imagem para html/Monster Energy Ultra Gold" alt="Monster Energy Ultra Gold">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#d4af37"></span>Monster Ultra Gold</div>
+        <div class="flavor-desc">Sabor intenso a ananás/abacaxi. Zero açúcar. Lata dourada muito reconhecível e elegante.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-zero">Zero Sugar</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="ultra">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Ultra Sunrise (laranja) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff8800"></span>Monster Ultra Sunrise</div>
+        <div class="flavor-desc">Sabor a laranja com toque de toranja. Zero açúcar. Muito refrescante, ideal para manhãs.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-zero">Zero Sugar</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="ultra">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Ultra Rosa (cor-de-rosa) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff66aa"></span>Monster Ultra Rosa</div>
+        <div class="flavor-desc">Sabor a toranja cor-de-rosa. Zero açúcar. Design rosé elegante. Um dos mais populares na Europa.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-zero">Zero Sugar</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="ultra">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Ultra Fiesta (azul turquesa) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#00aacc"></span>Monster Ultra Fiesta</div>
+        <div class="flavor-desc">Sabor tropical a manga. Zero açúcar. Um dos mais frutados e tropicais de toda a linha Ultra.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-zero">Zero Sugar</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="ultra">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Ultra Paradise (verde lima) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#88cc00"></span>Monster Ultra Paradise</div>
+        <div class="flavor-desc">Sabor a kiwi, lima e pepino. Zero açúcar. Extremamente refrescante. Lata verde lima vibrante.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-zero">Zero Sugar</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="ultra">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Ultra Black (preto cereja) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#1a0a1a"></span>Monster Ultra Black</div>
+        <div class="flavor-desc">Sabor intenso a cereja negra. Zero açúcar. Design todo preto sofisticado. Regressou ao mercado em 2025.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-zero">Zero Sugar</span><span class="flavor-badge badge-new">Regresso 2025</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         JUICE MONSTER
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item" data-cat="juice">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Juice Mango Loco -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff8800"></span>Juice Monster Mango Loco</div>
+        <div class="flavor-desc">Sumo de manga tropical com energético Monster. Um dos sabores de sumo mais populares de sempre. 137 calorias por lata.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-juice">Juice</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="juice">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Juice Pipeline Punch (havaiano) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff4400"></span>Juice Monster Pipeline Punch</div>
+        <div class="flavor-desc">Mistura havaiana de guava, maracujá e laranja. Sabor tropical muito intenso. Inspirado nas ondas do Havai.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-juice">Juice</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="juice">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Juice Pacific Punch (laranja) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff9900"></span>Juice Monster Pacific Punch</div>
+        <div class="flavor-desc">Punch de frutos tropicais do Pacífico. Doce e intenso. Lata laranja vibrante muito reconhecível.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-juice">Juice</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="juice">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Juice Rio Punch (vermelho) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#cc0033"></span>Juice Monster Rio Punch</div>
+        <div class="flavor-desc">Mistura exótica de papaia, manga, maçã e uva branca com toque de especiarias. O mais diferente da linha Juice.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-juice">Juice</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="juice">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Juice Bad Apple (vermelho escuro) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#991100"></span>Juice Monster Bad Apple</div>
+        <div class="flavor-desc">Sabor intenso a maçã vermelha. Originalmente exclusivo do Reino Unido. Chegou aos EUA em outubro 2025.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-juice">Juice</span><span class="flavor-badge badge-new">Novo 2025</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         JAVA MONSTER (CAFÉ)
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java Mean Bean (verde) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#2a5a1a"></span>Java Monster Mean Bean</div>
+        <div class="flavor-desc">O original e mais icónico da linha Java. Café com leite e baunilha cremosa. 188mg cafeína. O favorito pessoal de muitos fãs.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java Loca Moca (castanho) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#4a2200"></span>Java Monster Loca Moca</div>
+        <div class="flavor-desc">Café com chocolate e leite. Rico, denso e muito cremoso. Um dos sabores Java mais apreciados.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java Kona Blend (bege) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#8a6030"></span>Java Monster Kona Blend</div>
+        <div class="flavor-desc">Inspirado no café premium havaiano da costa Kona. Sabor suave, aromático e elegante.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java Salted Caramel (dourado) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#c8860a"></span>Java Monster Salted Caramel</div>
+        <div class="flavor-desc">Café com caramelo salgado. Equilíbrio perfeito entre doce, salgado e amargo do café.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java Irish Cream (verde escuro) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#1a4a20"></span>Java Monster Irish Cream</div>
+        <div class="flavor-desc">Café com creme irlandês estilo Baileys. Sabor suave, cremoso e muito elegante.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java French Vanilla Triple Shot -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#f5e6c8"></span>Java Monster French Vanilla Triple Shot</div>
+        <div class="flavor-desc">Tripla dose de espresso com baunilha francesa cremosa. Para quando precisas de mais força. Muito intenso.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java Mocha (preto) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#111111"></span>Java Monster Mocha</div>
+        <div class="flavor-desc">Café mocha com espresso intenso. 300mg de cafeína por lata — um dos mais fortes de toda a Monster. Cuidado!</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java Vanilla (branco/creme) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#f0e8d0"></span>Java Monster Vanilla</div>
+        <div class="flavor-desc">Café com baunilha suave e cremosa. 300mg de cafeína. Recordado em Itália em 2025 por exceder os limites legais de cafeína.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="java">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Java Swiss Chocolate -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#5a2a00"></span>Java Monster Swiss Chocolate</div>
+        <div class="flavor-desc">Café com chocolate suíço premium. Mais sofisticado que o Loca Moca, com chocolate de alta qualidade.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-coffee">Café</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         REHAB MONSTER
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item" data-cat="rehab">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Rehab Orange Tea -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff8800"></span>Rehab Monster Orange</div>
+        <div class="flavor-desc">Chá com sumo de laranja e energético. Menos açúcar, sem carbonatação excessiva. O mais refrescante da linha.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-rehab">Rehab</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="rehab">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Rehab Raspberry Tea (vermelho) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#cc2244"></span>Rehab Monster Raspberry Tea</div>
+        <div class="flavor-desc">Chá com framboesa e energético. A combinação chá+energético mais popular de toda a linha Rehab Monster.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-rehab">Rehab</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="rehab">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Rehab Green Tea (verde) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#338822"></span>Rehab Monster Green Tea</div>
+        <div class="flavor-desc">Chá verde com energético. Sabor mais natural e suave. Sem carbonatação intensa. Perfeito para hidratação.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-rehab">Rehab</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="rehab">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Rehab Lemonade (amarelo) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ddcc00"></span>Rehab Monster Lemonade</div>
+        <div class="flavor-desc">Limonada com chá e energético. Refrescante, azedo e doce ao mesmo tempo. Sem carbonatação forte.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-rehab">Rehab</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="rehab">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Rehab Peach Tea (pêssego) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff8855"></span>Rehab Monster Peach Tea</div>
+        <div class="flavor-desc">Chá de pêssego com energético. Leve e suave. Sem carbonatação intensa. Muito agradável.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-rehab">Rehab</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="rehab">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Rehab Watermelon -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ee3355"></span>Rehab Monster Watermelon</div>
+        <div class="flavor-desc">Chá com melancia e energético. Sabor frutal e refrescante. Um dos mais únicos na linha Rehab.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-rehab">Rehab</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HYDRO MONSTER
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item" data-cat="hydro">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Hydro Blue Ice -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#00bbee"></span>Hydro Monster Blue Ice</div>
+        <div class="flavor-desc">Bebida energética NÃO carbonatada com sabor a citríno-azul gelado. Focada em hidratação. Transparente na lata.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-hydro">Hydro</span><span class="flavor-badge badge-zero">Sem Gás</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="hydro">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Hydro Tropical Thunder -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff6633"></span>Hydro Monster Tropical Thunder</div>
+        <div class="flavor-desc">Sem carbonatação. Sabor tropical intenso. Pensado para hidratação e recuperação desportiva.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-hydro">Hydro</span><span class="flavor-badge badge-zero">Sem Gás</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="hydro">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Hydro Purple Passion -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#8833cc"></span>Hydro Monster Purple Passion</div>
+        <div class="flavor-desc">Sabor a uva e maracujá sem gás. Ideal pós-treino. Não carbonatado e muito hidratante.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-hydro">Hydro</span><span class="flavor-badge badge-zero">Sem Gás</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="hydro">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Hydro Manic Melon -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#88cc00"></span>Hydro Monster Manic Melon</div>
+        <div class="flavor-desc">Sabor a melão e melancia sem gás. Refrescante e leve. Ótimo para dias quentes.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-hydro">Hydro</span><span class="flavor-badge badge-zero">Sem Gás</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="hydro">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Hydro Charge -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#0055bb"></span>Hydro Monster Charge</div>
+        <div class="flavor-desc">Versão HydroSport para desempenho desportivo. Eletrólitos adicionados para melhor hidratação.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-hydro">HydroSport</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         NITRO MONSTER
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item" data-cat="nitro">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Nitro Super Dry (preto) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#222222"></span>Monster Nitro Super Dry</div>
+        <div class="flavor-desc">Carbonatado com AZOTO em vez de CO₂. Textura mais suave e cremosa. Sabor citríneo seco e refinado. Experiência única.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-nitro">Nitrogenado</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="nitro">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Nitro Gold (dourado) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#bb9900"></span>Monster Nitro Gold</div>
+        <div class="flavor-desc">Nitrogenado com sabor a ananás. Textura cremosa e suave graças ao azoto. Muito diferente de qualquer energético normal.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-nitro">Nitrogenado</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         DRAGON TEA MONSTER
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item" data-cat="tea">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Dragon Tea Green Tea -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#336600"></span>Monster Dragon Tea Green</div>
+        <div class="flavor-desc">Chá verde com energético. Sabor natural, suave e refrescante. Inspirado na cultura asiática do chá.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-tea">Dragon Tea</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="tea">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Dragon Tea White Tea -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#eeddcc"></span>Monster Dragon Tea White</div>
+        <div class="flavor-desc">Chá branco delicado com energético. Sabor floral e muito suave. O mais refinado da linha Dragon Tea.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-tea">Dragon Tea</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="tea">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Dragon Tea Yerba Mate -->
+        <img src="nome-do-teu-ficheiro.png" alt="Monster Original">
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#557733"></span>Monster Dragon Tea Yerba Mate</div>
+        <div class="flavor-desc">Yerba mate sul-americano com energético Monster. Sabor terroso e herbal. Cafeína natural do mate.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-tea">Dragon Tea</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         MAXX MONSTER
+         ═══════════════════════════════════════════════════════ -->
+
+    <div class="flavor-item" data-cat="maxx">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Maxx Solaris (laranja néon) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#ff6600"></span>Monster Maxx Solaris</div>
+        <div class="flavor-desc">Lata slim de alta performance. Sabor citríneo intenso. 215mg cafeína — mais forte que o original. Design néon vibrante.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-new">Alta Potência</span></div>
+      </div>
+    </div>
+
+    <div class="flavor-item" data-cat="maxx">
+      <div class="flavor-img-wrap">
+        <!-- IMAGEM: Maxx Watermelon (vermelho/verde) -->
+        <div class="img-placeholder">sem imagem</div>
+      </div>
+      <div class="flavor-info">
+        <div class="flavor-name"><span class="flavor-dot" style="background:#dd2244"></span>Monster Maxx Watermelon</div>
+        <div class="flavor-desc">Sabor intenso a melancia. Lata slim. 215mg cafeína. Um dos mais refrescantes da linha Maxx.</div>
+        <div class="flavor-badges"><span class="flavor-badge badge-new">Alta Potência</span></div>
+      </div>
+    </div>
+
+  </div><!-- fim flavor-list -->
+
+  <!-- CAFFEINE COMPARISON -->
+  <div class="caffeine-section">
+    <div class="caffeine-title">Comparação de Cafeína</div>
+    <div class="caffeine-bars">
+      <div class="bar-row"><div class="bar-label">Java Mocha / Vanilla</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:#c87a30"></div></div><div class="bar-val">300mg</div></div>
+      <div class="bar-row"><div class="bar-label">Monster Maxx</div><div class="bar-track"><div class="bar-fill" style="width:72%; background:#ff6600"></div></div><div class="bar-val">215mg</div></div>
+      <div class="bar-row"><div class="bar-label">Monster Original</div><div class="bar-track"><div class="bar-fill" style="width:53%; background:#00e639"></div></div><div class="bar-val">160mg</div></div>
+      <div class="bar-row"><div class="bar-label">Ultra (toda a linha)</div><div class="bar-track"><div class="bar-fill" style="width:50%; background:#aaaaaa"></div></div><div class="bar-val">150mg</div></div>
+      <div class="bar-row"><div class="bar-label">Rehab Monster</div><div class="bar-track"><div class="bar-fill" style="width:28%; background:#0099ff"></div></div><div class="bar-val">83mg</div></div>
+      <div class="bar-row"><div class="bar-label">Red Bull (250ml)</div><div class="bar-track"><div class="bar-fill" style="width:27%; background:#cc0000"></div></div><div class="bar-val">80mg</div></div>
+      <div class="bar-row"><div class="bar-label">Café Expresso</div><div class="bar-track"><div class="bar-fill" style="width:21%; background:#888"></div></div><div class="bar-val">64mg</div></div>
+    </div>
+  </div>
+
+</section>
+</div>
+
+<!-- INGREDIENTES -->
+<div id="ingredientes">
+<section>
+  <div class="section-header">
+    <p class="section-label">Composição</p>
+    <h2 class="section-title">Ingredientes Principais</h2>
+    <div class="section-divider"></div>
+  </div>
+  <p style="color: var(--muted); margin-bottom: 1.5rem; font-size: 0.95rem;">Valores por lata de 500ml do Monster Energy Original</p>
+  <div class="ingredients-grid">
+    <div class="ingredient-cell"><span class="ing-icon">⚡</span><div class="ing-name">Cafeína</div><span class="ing-amount">160mg</span><div class="ing-desc">Estimulante natural. Melhora o foco, reduz o cansaço e aumenta o desempenho físico e mental.</div></div>
+    <div class="ingredient-cell"><span class="ing-icon">🧬</span><div class="ing-name">Taurina</div><span class="ing-amount">2000mg</span><div class="ing-desc">Aminoácido natural. Suporta o metabolismo energético e tem efeitos antioxidantes.</div></div>
+    <div class="ingredient-cell"><span class="ing-icon">🌿</span><div class="ing-name">Ginseng</div><span class="ing-amount">400mg</span><div class="ing-desc">Extrato de Panax ginseng. Adaptogeno natural que combate a fadiga física e mental.</div></div>
+    <div class="ingredient-cell"><span class="ing-icon">💊</span><div class="ing-name">Vitamina B3</div><span class="ing-amount">43mg</span><div class="ing-desc">Niacina. Suporta o metabolismo energético celular e o sistema nervoso.</div></div>
+    <div class="ingredient-cell"><span class="ing-icon">🔋</span><div class="ing-name">Vitamina B6</div><span class="ing-amount">4.3mg</span><div class="ing-desc">Reduz o cansaço e fadiga. Apoia o metabolismo das proteínas e dos aminoácidos.</div></div>
+    <div class="ingredient-cell"><span class="ing-icon">✨</span><div class="ing-name">Vitamina B12</div><span class="ing-amount">13µg</span><div class="ing-desc">Essencial para o sistema nervoso e a formação de glóbulos vermelhos saudáveis.</div></div>
+    <div class="ingredient-cell"><span class="ing-icon">🍬</span><div class="ing-name">Açúcar</div><span class="ing-amount">55g</span><div class="ing-desc">Sacarose como energia rápida. A linha Ultra substitui por adoçantes sem calorias.</div></div>
+    <div class="ingredient-cell"><span class="ing-icon">🌾</span><div class="ing-name">L-Carnitina</div><span class="ing-amount">400mg</span><div class="ing-desc">Aminoácido que participa no metabolismo das gorduras como fonte de energia.</div></div>
+    <div class="ingredient-cell"><span class="ing-icon">💧</span><div class="ing-name">Inositol</div><span class="ing-amount">50mg</span><div class="ing-desc">Composto natural que ajuda na sinalização celular e equilíbrio do sistema nervoso.</div></div>
+  </div>
+</section>
+</div>
+
+<!-- HISTÓRIA -->
+<div id="historia" class="section-full">
+<section>
+  <div class="section-header">
+    <p class="section-label">A Saga Monster</p>
+    <h2 class="section-title">História da Marca</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item"><div class="timeline-year">2002</div><div class="timeline-title">Nascimento do Monstro</div><div class="timeline-text">A 18 de abril de 2002, a Hansen Natural Company lança o Monster Energy Original em Corona, Califórnia. A lata preta com a garra verde "M" e o slogan "Unleash The Beast" definem a identidade da marca para sempre.</div></div>
+    <div class="timeline-item"><div class="timeline-year">2002–2005</div><div class="timeline-title">Expansão Rápida</div><div class="timeline-text">Lançamento das primeiras variantes: Lo-Carb, Assault, Khaos e Mixxd. A Monster começa a patrocinar eventos de desporto extremo e conquista rapidamente uma base de fãs jovens e apaixonados.</div></div>
+    <div class="timeline-item"><div class="timeline-year">2007</div><div class="timeline-title">Java Monster — O Café Energético</div><div class="timeline-text">Lançamento da linha Java Monster, combinando café com energético. O Mean Bean torna-se um favorito absoluto. Hoje a linha tem mais de 9 sabores diferentes.</div></div>
+    <div class="timeline-item"><div class="timeline-year">2012</div><div class="timeline-title">Rebrand da Empresa</div><div class="timeline-text">A Hansen Natural Company muda o nome para Monster Beverage Corporation, refletindo a importância dominante da marca Monster no portfólio da empresa.</div></div>
+    <div class="timeline-item"><div class="timeline-year">2014</div><div class="timeline-title">Acordo Histórico com Coca-Cola</div><div class="timeline-text">A Coca-Cola adquire uma participação de 16.7% na Monster Beverage Corporation por 2.15 mil milhões de dólares, tornando-se parceira de distribuição global. Um dos maiores negócios da indústria de bebidas.</div></div>
+    <div class="timeline-item"><div class="timeline-year">2015</div><div class="timeline-title">Ultra — Revolução Zero Sugar</div><div class="timeline-text">Lançamento massivo da linha Ultra Zero Sugar. O Ultra White torna-se o sabor mais vendido de TODA a Monster nos EUA, superando até o original verde clássico.</div></div>
+    <div class="timeline-item"><div class="timeline-year">2018–2022</div><div class="timeline-title">Domínio do Mercado</div><div class="timeline-text">Em 2022, a Monster detém 30.1% do mercado americano de bebidas energéticas. Mais de 300 milhões de dólares em patrocínios desportivos anuais. Presença em mais de 175 países.</div></div>
+    <div class="timeline-item"><div class="timeline-year">2025–2026</div><div class="timeline-title">Novos Horizontes</div><div class="timeline-text">Lançamento de Ultra Wild Passion Fruit, Orange Dreamsicle, Juice Bad Apple e regresso do Ultra Black. Em janeiro 2026 chega o Monster Energy Strawberry Shot — o primeiro com sabor a morango na linha clássica.</div></div>
+  </div>
+</section>
+</div>
+
+<!-- PATROCÍNIOS -->
+<div id="patrocinios">
+<section>
+  <div class="section-header">
+    <p class="section-label">Mundo Monster</p>
+    <h2 class="section-title">Patrocínios e Desporto</h2>
+    <div class="section-divider"></div>
+  </div>
+  <p style="color: var(--muted); margin-bottom: 2rem; line-height: 1.7;">A Monster Energy investe centenas de milhões por ano em patrocínios em todo o mundo, apoiando atletas e eventos nos desportos mais radicais e emocionantes do planeta.</p>
+  <div class="sponsorship-grid">
+    <div class="sponsor-cell"><div class="sponsor-sport">Motos</div><div class="sponsor-name">Supercross / Motocross</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Automobilismo</div><div class="sponsor-name">NASCAR Cup Series</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Surf</div><div class="sponsor-name">WSL Championship Tour</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Skate</div><div class="sponsor-name">X Games</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">BMX</div><div class="sponsor-name">BMX Freestyle</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Motocross</div><div class="sponsor-name">FIM MX World Championship</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Off-Road</div><div class="sponsor-name">Monster Energy Trophy</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Esports</div><div class="sponsor-name">ESL / MLG Gaming</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">UFC</div><div class="sponsor-name">Artes Marciais Mistas</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Downhill MTB</div><div class="sponsor-name">UCI MTB World Cup</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Snow</div><div class="sponsor-name">Snowboard / Freeski</div></div>
+    <div class="sponsor-cell"><div class="sponsor-sport">Drift</div><div class="sponsor-name">Formula Drift Series</div></div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <div class="footer-logo">MONSTER</div>
+  <div class="footer-tagline">Unleash The Beast · Desde 2002</div>
+  <div class="footer-warning">
+    Site feito por Brian nº4 e Jose nº12, no ambito da disciplina de TIC.
+    <br><br>
+    Site criado com fins informativos e educativos. Monster Energy é marca registada da Monster Beverage Corporation.
+  </div>
+</footer>
+
+<script>
+function filterFlavors(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.flavor-item').forEach(card => {
+    if (card.dataset.cat === cat) {
+      card.classList.add('visible');
+    } else {
+      card.classList.remove('visible');
+    }
+  });
+}
+// Mostrar Monster Original por defeito
+filterFlavors('original', document.querySelector('.tab-btn'));
+</script>
+</body>
+</html>
